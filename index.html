@@ -5,82 +5,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Documento de prueba</title>
 </head>
 
 <body>
 
     <section>
-        <h1>SOCIAL FRUVER</h1>
+        <h1 onclick="counterExampleLoopWhile()">SOCIAL FRUVER</h1>
         <div>
             <ul id="my-top-list">
-
             </ul>
         </div>
     </section>
+    <hr>
+    <section>
+        <button onclick="counterExampleLoopWhile()">Ejecutar la function loop while</button>
+        <div id="contentWhile">
+        </div>
 
-    <script>
-        const listTop = ["Manzana", "Banano", "Fresa", "Durazno", "Piña", "Melocotón", "Patilla/Sandía", "Papaya", "Mango", "Kiwi", "Ciruela", "Maracuyá/Parchita", "Mora", "Naranja", "Mandarina", "Limón", "Pera", "Aguacate", "Uvas", "Arándanos"];
+        <button onclick="counterExampleLoopDoWhile()">Ejecutar la function loop Do While</button>
+        <div id="contentDoWhile">
+        </div>
+    </section>
+    <hr>
+    <section>
+        <h2>Ejemplo IF ELSE</h2>
+        <button onclick="validateAge('Chayanne', 17)">Validar Edad 17</button>
+        <br>
+        <button onclick="validateYounger('Chayanne', 18)">Validar Juventud 18</button>
+    </section>
+    <section>
+        <h2>Ejemplo Nueva Ventana</h2>
+        <button onclick="openNewWindow('w3schools.com')">Abrir w3schools.com</button>
+    </section>
 
-        /* UN ARRAY PUEDE TENER PROPIEDADES Y METODOS/FUNCIONES
-            PROPIEDAD: SOLO ES SU NOMBRE
-            METODOS/FUNCIONES: RECIBE PARAMETROS, POR LO CUAL, FINALIZA CON ()
-            EJEMPLOS
-            listTop.length
-            listTop.push() */
+    <section>
+        <h2>Ejemplo Obtener datos de un formulario</h2>
 
-        // for (let i = 0; i < listTop.length; i++) {
-        //     let node = document.createElement("li") // <li></li>
-        //     let textNode = document.createTextNode(listTop[i]) // Manzana
-        //     node.appendChild(textNode) // <li>Manzana</li>
+        <form>
+            <input type="text" id="valor1" placeholder="valor 1"> *
+            <input type="text" id="valor2" placeholder="valor ">
+            <br> Resultado : <input type="text" id="resultado" placeholder="resultado" disabled>
+            <br>
+            <button type="button" onclick="getResult()">Obtener Resultado</button>
+        </form>
+    </section>
 
-        //     document.getElementById("my-top-list").after().appendChild(node)
-        // }
 
-        let doc = document.getElementById('my-top-list')
-        for (let i = 0; i < listTop.length; i++) {
-            // document.getElementById('my-top-list').innerHTML += '<li>' + listTop[i] + '</li>'
-            let text = `<li>${i} ${listTop[i] }</li>`
-            doc.innerHTML += text
-        }
-
-        // JSON = JavaScript Object Notation
-
-        // const listTop = ["Manzana", "Banano", "Fresa", "Durazno", "Piña", "Melocotón", "Patilla/Sandía", "Papaya", "Mango", "Kiwi", "Ciruela", "Maracuyá/Parchita", "Mora", "Naranja", "Mandarina", "Limón", "Pera", "Aguacate", "Uvas", "Arándanos"];
-
-        const jsonListTop = [{
-            name: "Manzana",
-            type: "fruta"
-        }, {
-            name: "papa",
-            type: "verdura"
-        }, {
-            name: "caraota",
-            type: "frijol"
-        }, {
-            name: "espinaca",
-            type: "hortaliza"
-        }];
-        for (let i = 0; i < jsonListTop.length; i++) {
-            console.log(` ${jsonListTop[i].name} : ${jsonListTop[i].type} `);
-
-        }
-
-        // let texto = "El contador se va a ejecutar del 0 al 10" + " <br>"
-        // var counter = 0;
-        // while (counter <= 10) {
-        //     document.write(texto);
-        //     console.log(texto);
-        //     counter++;
-        // }
-
-        // texto = ' EN DO WHILE ' + texto
-        // do {
-        //     document.write(texto);
-        //     console.log(texto);
-        //     counter++;
-        // } while (counter <= 20)
-    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
